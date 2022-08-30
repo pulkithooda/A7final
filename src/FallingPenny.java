@@ -15,10 +15,8 @@ public class FallingPenny {
 
     public static void main(String[] args)
     {
-           // add falling time here.
-        double fallingTimeVar = sqrt(2 * ESBHeight / acceleration);
         String result;
-        double fallingDistance=ESBHeight;
+        double fallingDistance;
         long buildingHeight;
         String planet;
         double localAcceleration;
@@ -29,43 +27,53 @@ public class FallingPenny {
         double accelDistance = 0;
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Test falling time: "+fallingTimeVar);
-        // Part 1.
-        fallingTimeVar=fallingTime(fallingDistance);
+        // Part 1 - done.
+        double fallingTimeVar = sqrt(2 * ESBHeight / acceleration);
+        System.out.println("It takes "+fallingTimeVar+" seconds to reach the ground.");
 
-        // Part 2. So how fast is the penny moving?
-        velocity = time*acceleration;
+        // Part 2. So how fast is the penny moving? - done
+        velocity = fallingTimeVar*acceleration;
         System.out.println("The velocity is "+velocity);
 
         // Part 3. but what about terminal velocity? This is the point at which air resistance == gravity.
         // 18 m/s is terminal velocity. How long will it take to get there?
+        // part 3 done
         timeToTerminalVelocity= 18/acceleration;
         System.out.println("The time to reach terminal velocity is "+timeToTerminalVelocity+" seconds.");
 
         // Part 4.  So how far will the penny fall during the pre-terminal velocity time? Let's store this in a variable
-        // called accelDistance.
+        // called accelDistance. -done
         accelDistance=acceleration*(timeToTerminalVelocity*timeToTerminalVelocity)/2;
         System.out.println("Before reaching terminal velocity the penny will fall "+accelDistance+"meters");
 
-        // Part 5. And how long will the penny fall at terminal velocity?
+        // Part 5. And how long will the penny fall at terminal velocity? -done
         timeAtTerminalVelocity=sqrt(2*(ESBHeight-accelDistance)/acceleration);
         System.out.println("The penny will fall for "+timeAtTerminalVelocity+"after reaching terminal velocity");
 
-       // part 10: put your while loop here.
+       // part 10: put your while loop here. - done
 
-        System.out.print("Enter the height of the building: ");
-        buildingHeight=in.nextInt();
         System.out.print("Enter the planet/moon: ");
         planet=in.nextLine();
         localAcceleration=getAcceleration(planet);
-        fallingTimeVar=spaceFallingTime(buildingHeight,localAcceleration);
-        System.out.println("It will take "+ fallingTimeVar+ " seconds for the penny to fall a distance of "+buildingHeight+" on "+planet);
+        while (planet.equalsIgnoreCase("moon")||planet.equalsIgnoreCase("mars")||planet.equalsIgnoreCase("jupiter")||planet.equalsIgnoreCase("saturn")||planet.equalsIgnoreCase("titan")||planet.equalsIgnoreCase("venus"))
+        {
+            System.out.print("Enter the height of the building: ");
+            buildingHeight=in.nextInt();
+            localAcceleration=getAcceleration(planet);
+            fallingTimeVar=spaceFallingTime(buildingHeight,localAcceleration);
+            System.out.println("It will take "+ fallingTimeVar+ " seconds for the penny to fall a distance of "+buildingHeight+" on "+planet);
+            System.out.print("Enter the planet/moon: ");
+            planet=in.next();
+            localAcceleration=getAcceleration(planet);
+        }
+
 
     }
 
     // part 6.  Make a static method called fallingTime. It should take one parameter,
     // called fallingDistance, as input, and return the time needed to fall a
     // given distance, according to the expression above. Try it out with different distances.
+    //done
 
     public static double fallingTime(double fallingDistance)
     {
@@ -74,6 +82,7 @@ public class FallingPenny {
 
     // part 7. Step 7: Make a static method called spaceFallingTime that takes two parameters:
     // a distance and a local acceleration, and returns the time elapsed.
+    //done
 
     public static double spaceFallingTime(long fallingDistance, double localAcceleration)
     {
@@ -83,6 +92,7 @@ public class FallingPenny {
     // part 8, 9: Let's make a helper function called getAcceleration. It will take a string,
     //###  representing our location, and return the appropriate value. We'll do this using a
     //  conditional or if statement.
+    //done
 
     public static double getAcceleration(String currentLocation)
     {
@@ -112,7 +122,7 @@ public class FallingPenny {
         }
         else
         {
-            System.out.println("I don't know that planet, Here's Earth");
+            System.out.println("I don't know that planet, Here's the acceleration on Earth: 9.8");
             return 9.8;
         }
     }

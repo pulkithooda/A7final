@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e4ae72f-a8b7-4b24-9c99-43a339d34384" name="Changes" comment="Lab 1 starter code.">
+    <list default="true" id="6e4ae72f-a8b7-4b24-9c99-43a339d34384" name="Changes" comment=" Lab 1 unorganized code, will need to clean up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab 1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab 1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FallingPenny.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FallingPenny.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +46,7 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.FallingPennyTest.getAcceleration">
+  <component name="RunManager" selected="Application.FallingPenny">
     <configuration name="FallingPenny" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FallingPenny" />
       <module name="Lab 1" />
@@ -77,9 +76,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FallingPenny" />
         <item itemvalue="JUnit.FallingPennyTest.getAcceleration" />
         <item itemvalue="JUnit.FallingPennyTest.spaceFallingTime" />
-        <item itemvalue="Application.FallingPenny" />
       </list>
     </recent_temporary>
   </component>
@@ -100,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660762421544</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=" Lab 1 unorganized code, will need to clean up">
+      <created>1661800346418</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661800346418</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +125,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lab 1 starter code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab 1 starter code." />
+    <MESSAGE value=" Lab 1 unorganized code, will need to clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Lab 1 unorganized code, will need to clean up" />
   </component>
 </project>
