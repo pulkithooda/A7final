@@ -5,6 +5,8 @@
 import java.math.*;
 import java.util.Scanner;
 import static java.lang.Math.sqrt;
+import java.lang.Math;
+import java.lang.management.GarbageCollectorMXBean;
 
 public class FallingPenny {
     // simulating the falling velocity of a penny.
@@ -25,6 +27,7 @@ public class FallingPenny {
         double timeToTerminalVelocity = 0;
         double timeAtTerminalVelocity = 0;
         double accelDistance = 0;
+        String goAgain="Y";
         Scanner in = new Scanner(System.in);
 
         // Part 1 - done.
@@ -44,30 +47,26 @@ public class FallingPenny {
         // Part 4.  So how far will the penny fall during the pre-terminal velocity time? Let's store this in a variable
         // called accelDistance. -done
         accelDistance=acceleration*(timeToTerminalVelocity*timeToTerminalVelocity)/2;
-        System.out.println("Before reaching terminal velocity the penny will fall "+accelDistance+"meters");
+        System.out.println("Before reaching terminal velocity the penny will fall "+accelDistance+" meters");
 
         // Part 5. And how long will the penny fall at terminal velocity? -done
         timeAtTerminalVelocity=sqrt(2*(ESBHeight-accelDistance)/acceleration);
-        System.out.println("The penny will fall for "+timeAtTerminalVelocity+"after reaching terminal velocity");
+        System.out.println("The penny will fall for "+timeAtTerminalVelocity+" after reaching terminal velocity");
 
        // part 10: put your while loop here. - done
-
-        System.out.print("Enter the planet/moon: ");
-        planet=in.nextLine();
-        localAcceleration=getAcceleration(planet);
-        while (planet.equalsIgnoreCase("moon")||planet.equalsIgnoreCase("mars")||planet.equalsIgnoreCase("jupiter")||planet.equalsIgnoreCase("saturn")||planet.equalsIgnoreCase("titan")||planet.equalsIgnoreCase("venus"))
+        do
         {
             System.out.print("Enter the height of the building: ");
             buildingHeight=in.nextInt();
+            System.out.print("Enter the planet/moon: ");
+            in.nextLine();
+            planet=in.nextLine();
             localAcceleration=getAcceleration(planet);
             fallingTimeVar=spaceFallingTime(buildingHeight,localAcceleration);
             System.out.println("It will take "+ fallingTimeVar+ " seconds for the penny to fall a distance of "+buildingHeight+" on "+planet);
-            System.out.print("Enter the planet/moon: ");
-            planet=in.next();
-            localAcceleration=getAcceleration(planet);
-        }
-
-
+            System.out.println("Do you want to enter again (Y/N)");
+            goAgain=in.nextLine();
+        }while(goAgain.equalsIgnoreCase("Y"));
     }
 
     // part 6.  Make a static method called fallingTime. It should take one parameter,
@@ -122,7 +121,7 @@ public class FallingPenny {
         }
         else
         {
-            System.out.println("I don't know that planet, Here's the acceleration on Earth: 9.8");
+            System.out.println("I don't know that planet, Here's Earth:");
             return 9.8;
         }
     }
