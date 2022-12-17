@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e4ae72f-a8b7-4b24-9c99-43a339d34384" name="Changes" comment="Completed code">
+    <list default="true" id="6e4ae72f-a8b7-4b24-9c99-43a339d34384" name="Changes" comment="Completed code and made loop better">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FallingPenny.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FallingPenny.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661892146728</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Completed code and made loop better">
+      <created>1661970470462</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661970470462</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +140,7 @@
     <MESSAGE value="Lab 1 starter code." />
     <MESSAGE value=" Lab 1 unorganized code, will need to clean up" />
     <MESSAGE value="Completed code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed code" />
+    <MESSAGE value="Completed code and made loop better" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed code and made loop better" />
   </component>
 </project>
